@@ -39,16 +39,16 @@ export default function MainContent() {
       <div className="mt-8">
         <h2 className="text-2xl font-bold">Hello, Woilon</h2>
         <div className="flex justify-between mt-4">
-          {songs.slice(0, 4).map((song) => {
-            return <SongCard song={song} />;
+          {songs.slice(0, 4).map((song, index) => {
+            return <SongCard key={index} song={song} />;
           })}
         </div>
       </div>
       <div className="mt-8">
         <h2 className="text-2xl font-bold">Hello, Woilon</h2>
         <div className="flex justify-between mt-4">
-          {songs.slice(0, 4).map((song) => {
-            return <SongCard song={song} />;
+          {songs.slice(0, 4).map((song, index) => {
+            return <SongCard key={index} song={song} />;
           })}
         </div>
       </div>
