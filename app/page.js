@@ -1,8 +1,8 @@
-import LeftSidebar from "./leftSidebar/LeftSidebar";
-import LeftSidebarNav from "./leftSidebar/LeftSidebarNav";
-import MainContent from "./mainContent/MainContent";
-import MusicPlayerControlBar from "./MusicPlayerControlBar";
-import RightSidebar from "./RightSidebar";
+import LeftSidebar from "../components/leftSidebar/LeftSidebar";
+import LeftSidebarNav from "../components/leftSidebar/LeftSidebarNav";
+import MainContent from "../components/mainContent/MainContent";
+import MusicPlayerControlBar from "../components/musicControlBar/MusicPlayerControlBar";
+import RightSidebar from "../components/rightSidebar/RightSidebar";
 
 export default function Home() {
   return (

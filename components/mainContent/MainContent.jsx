@@ -1,4 +1,4 @@
-import songs from "./songs.json";
+import songs from "../../app/songs.json";
 import { CiSearch } from "react-icons/ci";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import SongCard from "./SongCard";

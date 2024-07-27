@@ -3,14 +3,12 @@ import {
   FaPlus,
   FaRandom,
   FaStepBackward,
-  FaPause,
   FaStepForward,
   FaSync,
   FaVolumeUp,
   FaMicrophone,
   FaDesktop,
   FaShareAlt,
-  FaPlay,
 } from "react-icons/fa";
 import PlayPause from "./PlayPause";
 

@@ -1,5 +1,5 @@
-import CreateButton from "./rightSidebar/CreateButton";
-import songs from "./songs.json";
+import CreateButton from "./CreateButton";
+import songs from "../../app/songs.json";
 import { FaSyncAlt } from "react-icons/fa";
 
 

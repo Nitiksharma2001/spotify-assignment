@@ -3,7 +3,7 @@ import {
   MdFavorite,
   MdFolder,
 } from "react-icons/md";
-import LeftSidebarNav from "../LeftSidebarNav";
+import LeftSidebarNav from "./LeftSidebarNav";
 export default function LeftSidebar() {
   return (
     <>
