@@ -11,7 +11,7 @@ export default function Home() {
         <div className="lg:block hidden bg-gray-900 w-[15%] p-4">
           <LeftSidebar />
         </div>
-        <div className="bg-black p-4 overflow-y-scroll border-red-50 no-scrollbar">
+        <div className="bg-black p-4 overflow-y-scroll min-w-[70%] border-red-50 no-scrollbar">
           <MainContent />
         </div>
         <div className="xl:block hidden bg-gray-900 w-[45%] p-4">
