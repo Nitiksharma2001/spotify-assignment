@@ -10,7 +10,9 @@ import {
   FaMicrophone,
   FaDesktop,
   FaShareAlt,
+  FaPlay,
 } from "react-icons/fa";
+import PlayPause from "./PlayPause";
 
 export default function MusicPlayerControlBar() {
   return (
@@ -36,9 +38,7 @@ export default function MusicPlayerControlBar() {
           <button className="mx-2">
             <FaStepBackward />
           </button>
-          <button className="mx-2">
-            <FaPause />
-          </button>
+          <PlayPause/>
           <button className="mx-2">
             <FaStepForward />
           </button>

@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <main className="flex justify-between flex-grow h-screen text-white ">
-        <div className="bg-gray-900 w-[15%] p-4 ">
+        <div className="bg-gray-900 w-[15%] p-4">
           <LeftSidebar />
         </div>
         <div className="bg-black p-4 overflow-y-scroll border-red-50 no-scrollbar">
@@ -17,9 +17,9 @@ export default function Home() {
           <RightSidebar />
         </div>
       </main>
-      {/* <div className="absolute w-full bottom-0">
+      <div className="absolute w-full bottom-0">
         <MusicPlayerControlBar />
-      </div> */}
+      </div>
     </>
   );
 }
