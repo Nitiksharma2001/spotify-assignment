@@ -17,7 +17,7 @@ import PlayPause from "./PlayPause";
 export default function MusicPlayerControlBar() {
   return (
     <div className="bg-black text-white p-4 flex items-center justify-between">
-      <div className="flex items-center w-1/5">
+      <div className="hidden lg:flex items-center w-1/5">
         <div className="mr-4">
           <p className="text-sm font-semibold">Date</p>
           <p className="text-xs text-gray-400">あれくん</p>
@@ -57,7 +57,7 @@ export default function MusicPlayerControlBar() {
         </div>
       </div>
 
-      <div className="flex items-center w-1/5">
+      <div className="hidden lg:flex items-center w-1/5">
         <button className="mx-2">
           <FaVolumeUp />
         </button>

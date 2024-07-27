@@ -10,7 +10,7 @@ const SongCard = ({ song }) => {
       <img
         src={song.artwork} // Replace with actual image path
         alt="Today's Hot Hits"
-        className="w-full h-40 object-cover rounded-lg"
+        className="object-cover rounded-lg"
       />
       <p className="mt-2 font-semibold">{song.title}</p>
       <p className="text-gray-400 text-sm">The most played tracks right now</p>

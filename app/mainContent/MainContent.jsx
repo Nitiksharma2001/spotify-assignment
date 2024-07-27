@@ -1,7 +1,7 @@
 import songs from "./songs.json";
 import { CiSearch } from "react-icons/ci";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
-import SongCard from "./SongCard";
+import SongCard from "../SongCard";
 
 export default function MainContent() {
   return (

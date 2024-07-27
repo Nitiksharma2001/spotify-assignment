@@ -1,5 +1,7 @@
+import CreateButton from "./rightSidebar/CreateButton";
 import songs from "./songs.json";
 import { FaSyncAlt } from "react-icons/fa";
+
 
 const RightSidebar = () => {
   return (
@@ -48,7 +50,7 @@ const RightSidebar = () => {
           <button className="text-sm text-gray-400">See all</button>
         </div>
         <ul>
-          {songs.slice(2, 4).map((item, index) => (
+          {songs.slice(4).map((item, index) => (
             <li key={index} className="flex items-center justify-between mb-4 cursor-pointer">
               <div className="flex">
                 <img
@@ -67,10 +69,9 @@ const RightSidebar = () => {
           ))}
         </ul>
       </div>
+      <CreateButton/>
 
-      <button className="bg-gray-800 text-gray-400 w-full py-2 rounded">
-        Create New Playlist
-      </button>
+     
     </>
   );
 };

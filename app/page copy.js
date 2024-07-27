@@ -1,4 +1,4 @@
-import LeftSidebar from "./LeftSidebar";
+import LeftSidebar from "./leftSidebar/LeftSidebar";
 
 export default function Home() {
   return (
