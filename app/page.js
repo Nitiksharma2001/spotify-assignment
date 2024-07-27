@@ -1,3 +1,5 @@
+'use client'
+import { useState } from "react";
 import LeftSidebar from "../components/leftSidebar/LeftSidebar";
 import LeftSidebarNav from "../components/leftSidebar/LeftSidebarNav";
 import MainContent from "../components/mainContent/MainContent";
@@ -5,6 +7,10 @@ import MusicPlayerControlBar from "../components/musicControlBar/MusicPlayerCont
 import RightSidebar from "../components/rightSidebar/RightSidebar";
 
 export default function Home() {
+  const [src, setSrc] = useState(null)
+  const updateSrc = (src) => {
+    setSrc(src)
+  }
   return (
     <>
       <main className="h-screen flex flex-grow text-white">
@@ -12,14 +18,14 @@ export default function Home() {
           <LeftSidebar />
         </div>
         <div className="bg-black p-4 overflow-y-scroll min-w-[70%] border-red-50 no-scrollbar">
-          <MainContent />
+          <MainContent updateSrc={updateSrc}/>
         </div>
         <div className="xl:block hidden bg-gray-900 w-[45%] p-4">
-          <RightSidebar />
+          <RightSidebar updateSrc={updateSrc}/>
         </div>
       </main>
       <div className="absolute w-full bottom-16 lg:bottom-0">
-        <MusicPlayerControlBar />
+        <MusicPlayerControlBar src={src} />
       </div>
       <div className="lg:hidden flex justify-between px-4 h-16 items-center absolute bottom-0 bg-black w-full">
         <LeftSidebarNav />
@@ -27,3 +33,4 @@ export default function Home() {
     </>
   );
 }
+ 

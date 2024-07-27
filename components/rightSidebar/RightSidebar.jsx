@@ -3,7 +3,7 @@ import songs from "../../app/songs.json";
 import { FaSyncAlt } from "react-icons/fa";
 
 
-const RightSidebar = () => {
+const RightSidebar = ({updateSrc}) => {
   return (
     <>
       <div className="flex items-center justify-between mb-8">
@@ -25,7 +25,7 @@ const RightSidebar = () => {
         </div>
         <ul>
           {songs.slice(0, 4).map((item, index) => (
-            <li key={index} className="flex items-center justify-between mb-4 cursor-pointer">
+            <li key={index} className="flex items-center justify-between mb-4 cursor-pointer" onClick={() => updateSrc(item.url)}>
               <div className="flex">
                 <img
                   src={item.artwork}
@@ -51,7 +51,7 @@ const RightSidebar = () => {
         </div>
         <ul>
           {songs.slice(4).map((item, index) => (
-            <li key={index} className="flex items-center justify-between mb-4 cursor-pointer">
+            <li key={index} className="flex items-center justify-between mb-4 cursor-pointer" onClick={() => updateSrc(item.url)}> 
               <div className="flex">
                 <img
                   src={item.artwork}

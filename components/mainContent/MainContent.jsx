@@ -3,7 +3,7 @@ import { CiSearch } from "react-icons/ci";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import SongCard from "./SongCard";
 
-export default function MainContent() {
+export default function MainContent({updateSrc}) {
   return (
     <>
       <div className="flex flex-grow items-center gap-4 mb-4">
@@ -40,12 +40,12 @@ export default function MainContent() {
         <h2 className="text-2xl font-bold">Hello, Woilon</h2>
         <div className="hidden lg:flex justify-between gap-8 mt-4">
           {songs.slice(0, 4).map((song, index) => {
-            return <SongCard key={index} song={song} />;
+            return <SongCard updateSrc={updateSrc} key={index} song={song} />;
           })}
         </div>
         <div className="flex lg:hidden justify-between gap-8 mt-4">
           {songs.slice(0, 3).map((song, index) => {
-            return <SongCard key={index} song={song} />;
+            return <SongCard updateSrc={updateSrc} key={index} song={song} />;
           })}
         </div>
       </div>
@@ -53,12 +53,12 @@ export default function MainContent() {
         <h2 className="text-2xl font-bold">My Playlist</h2>
         <div className="hidden lg:flex justify-between gap-8 mt-4">
           {songs.slice(2,6).map((song, index) => {
-            return <SongCard key={index} song={song} />;
+            return <SongCard updateSrc={updateSrc} key={index} song={song} />;
           })}
         </div>
         <div className="flex lg:hidden justify-between gap-8 mt-4">
           {songs.slice(3, 6).map((song, index) => {
-            return <SongCard key={index} song={song} />;
+            return <SongCard updateSrc={updateSrc} key={index} song={song} />;
           })}
         </div>
       </div>

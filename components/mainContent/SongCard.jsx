@@ -1,11 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
 
-const SongCard = ({ song }) => {
+const SongCard = ({ song, updateSrc }) => {
   return (
     <motion.div
       whileHover={{ scale: 1.2 }}
       className="rounded-lg cursor-pointer"
+      onClick={() => updateSrc(song.url)}  
     >
       <img
         src={song.artwork} // Replace with actual image path
