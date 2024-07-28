@@ -23,8 +23,8 @@ export default function MusicPlayerControlBar({ src }) {
     onProgressChange,
     onLoadedMetadata,
     onVolumeChange,
-    updateProgressId,
     toggleVolume,
+    updateProgress,
     progressId,
     isPlaying,
     isMuted,
@@ -39,11 +39,7 @@ export default function MusicPlayerControlBar({ src }) {
     <div className="bg-black text-white p-4 flex items-center justify-between">
       <audio
         ref={audioRef}
-        onPlay={() => {
-          console.log('hi')
-          updateProgressId()      
-
-        }}
+        onPlay={() => updateProgress()}
         onPause={() => clearInterval(progressId)}
         onLoadedMetadata={onLoadedMetadata}
         src={src}
