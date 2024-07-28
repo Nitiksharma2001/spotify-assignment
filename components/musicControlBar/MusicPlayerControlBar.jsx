@@ -40,7 +40,7 @@ export default function MusicPlayerControlBar({ src }) {
       <audio
         ref={audioRef}
         onPlay={() => updateProgress()}
-        onPause={() => clearInterval(progressId)}
+        onPause={() => clearInterval(progressId.current)}
         onLoadedMetadata={onLoadedMetadata}
         src={src}
       ></audio>
@@ -95,6 +95,7 @@ export default function MusicPlayerControlBar({ src }) {
           <input
             ref={volumeRef}
             onChange={onVolumeChange}
+            defaultValue="100"
             type="range"
             className="w-full h-1 bg-blue-500 rounded-lg appearance-none"
           />

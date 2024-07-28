@@ -10,13 +10,17 @@ export default function useMusicController( src ) {
   const progressId = useRef(undefined)
 
   useEffect(() => {
+    if(!volumeRef.current || !progressRef.current || !audioRef.current) return 
+
     setDuration(0);
     setIsPlaying(false);
+    volumeRef.current.value = 100;
+    progressRef.current.value = 0;
     
     return () => {
       clearInterval(progressId.current)
-      progressRef.current.value = "0";
-      volumeRef.current.value = "0";
+      progressRef.current.value = 0;
+      volumeRef.current.value = 100;
     };
   }, [src]);
 
