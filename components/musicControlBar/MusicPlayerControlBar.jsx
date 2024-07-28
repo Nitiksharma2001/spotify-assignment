@@ -17,7 +17,6 @@ import useMusicController from "./useMusicController";
 import { BsFillMicMuteFill } from "react-icons/bs";
 
 export default function MusicPlayerControlBar({ src }) {
-  if (!src) return;
   const {
     changePlayback,
     forBackAudio,
@@ -34,11 +33,17 @@ export default function MusicPlayerControlBar({ src }) {
     volumeRef,
   } = useMusicController(src);
 
+  if (!src) return;
+
   return (
     <div className="bg-black text-white p-4 flex items-center justify-between">
       <audio
         ref={audioRef}
-        onPlay={() => updateProgressId()}
+        onPlay={() => {
+          console.log('hi')
+          updateProgressId()      
+
+        }}
         onPause={() => clearInterval(progressId)}
         onLoadedMetadata={onLoadedMetadata}
         src={src}
